@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "df371e74-5d5d-49c2-b238-0899bd44539f",
+		"name": "Day35-Render.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38046407"
+	},
+	"item": [
+		{
+			"name": "Mentors",
+			"item": [
+				{
+					"name": "Get All Mentors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/mentors/",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"mentors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Mentor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mentorId\":\"m5\",\r\n    \"mentorName\":\"Kakashi Hatake\",\r\n    \"course\":\"Ninjutsu\",\r\n    \"batch\":\"Third Ninja War\",\r\n    \"students\" : []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/mentors/",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"mentors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Mentor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"student\": \"Naruto Uzumaki\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/mentors/m5",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"mentors",
+								"m5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get mentors all students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/mentors/m3",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"mentors",
+								"m3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/students",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\" : \"s5\",\r\n    \"studentName\" : \"Tenten\",\r\n    \"course\" : \"Ninjutsu\",\r\n    \"batch\" : \"Third Ninja War\",\r\n    \"currentMentor\" : \"Guy Sensei\",\r\n    \"historyOfMentors\" : [\"Guy Sensei\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/students",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student mentor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentMentor\" : \"Naruto Uzumaki\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/students/s5",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"students",
+								"s5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a student's all mentors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://day35-assign-mentor.onrender.com/students/s3",
+							"protocol": "https",
+							"host": [
+								"day35-assign-mentor",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"students",
+								"s3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
